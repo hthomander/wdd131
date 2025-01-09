@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WDD 131 | Hazel Thomander</title>
+        <title>WDD 131 | Dynamic Web Fundamentals | Hazel Beth Thomander</title>
+        <meta name="description" content="WDD 131 | Dynamic Web Fundamentals | Hazel Thomander. This page showcases key concepts of dynamic wed development, including HTML, CSS, and JavaScript fundamentals.">
+        <meta name="author" content="Hazel Beth Thomander">
+        <link rel="stylesheet" href="styles/base.css">
+        <link href="https.fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <script src="getdates.js" defer></script>
+        
     </head>
+
     <body>
-        <h1>WDD 131 | Hazel Thomander</h1>
-    </body>
+        <header>
+        <h1>Dynamic Web Fundamentals | Hazel Beth Thomander</h1>
+        <nav>
+            <ul class="nav">
+                <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Favorite Scripture</a></li>
+                <li><a href="#" target="_blank">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>About Me</h2>
+            <img src="images/bennyandme.jpg" alt="Hazel Beth holding her pup affectionately">
+            <p>Hey! My name is Hazel Beth and I am just a small town girl with her pup trying to finish my undergraduate degree in software development. Aside from being a student, I also get to guest teach around my local school district. In my downtime I have been prepping for the LSAT, and plan to pursue that after finishing my undergrad.</p>
+            <hr>
+            <p>In addition to my achedemic pursuits, I love adventuring with my pup, Benjamin. Those adventures and experiences help me stay balanced and inspire my work on web projects!</p>
+            <img src="images/smallimg.jpg" alt="Additional Resources" class="small-img">
+        </section>
+        <section class="card">
+            <h2>Dev Basics Resources</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN Web Docs: CSS</a></li>
+                <li><a href="https://www.w3schools.com/css/" target="_blank">W3Schools: CSS</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs: HTML</a></li>
+                <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools: HTML</a></li>
+                <li><a href="https://html.spec.whatwg.org/" target="_blank">HTML Living Standard</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Hazel Beth Thomander, Idaho, USA.</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
 </html>

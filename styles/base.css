@@ -1,0 +1,117 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color:mediumslateblue;
+    color: #333;
+}
+
+header {
+    background-color:lavender;
+    color: #333;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; 
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #b740cf;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color:#e3a558;
+
+}
+
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+
+.card {
+    background: #fff;
+    border: 4px solid #d0ace1;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.card img {
+    max-width: auto;
+    height: aut0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card .small-img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.card ul li {
+    margin-bottom: 0.5rem;
+}
+
+.card ul li a {
+    color: #c87eef;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card ul li a:hover {
+    color:#e3a558;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: lavender;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
