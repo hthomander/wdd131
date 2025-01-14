@@ -1,0 +1,23 @@
+@media (min-width: 48rem) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .temples {
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #menu {
+        display: none;
+    }
+}
