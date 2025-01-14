@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('year').textContent = year;
 
     const lastModified = new Date(document.lastModified);
-    document.getElementById('last-modified').textContent = lastModified.toLocaleDateString();
+    document.getElementById('last-modified').textContent = lastModified.toLocaleString();
 
     const menuButton = document.querySelector('#menu');
     const navigation = document.querySelector('.navigation');
