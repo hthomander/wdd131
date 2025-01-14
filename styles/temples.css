@@ -76,7 +76,6 @@ main {
     margin: 0;
     text-align: center;
     color:#781aab;
-    flex-basis: cal(33.33% - 1rem);
     
  }
 
