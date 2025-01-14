@@ -10,6 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     menuButton.addEventListener('click', () => {
         navigation.classList.toggle('open');
-        menuButtton.clasList.toggle('open');
+        menuButton.classList.toggle('open');
     });
 });
