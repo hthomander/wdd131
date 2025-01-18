@@ -8,16 +8,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuButton = document.querySelector('#menu');
     const navigation = document.querySelector('.navigation');
 
-    menuButton.addEventListener('click', () => {
-        const isOpen = navigation.classList.toggle('open');
-        navigation.classList.toggle('open');
-        menuButton.setAttribute('aria-expanded', isOpen);
-    });
+    console.log(menuButton);
 
-    menuButton.addEventListner('keydown', (e) => {
+    if  (menuButton) {
+        menuButton.addEventListener('click', () => {
+            const isOpen = navigation.classList.toggle('open');
+            menuButton.classList.toggle('open');
+            menuButton.setAttribute('aria-expanded', isOpen);
+
+        });
+
+    menuButton.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             menuButton.click();
-        }
-    })
+            }
+    
+        })
+    }
 });
