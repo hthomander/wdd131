@@ -9,7 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const navigation = document.querySelector('.navigation');
 
     menuButton.addEventListener('click', () => {
+        const isOpen = navigation.classList.toggle('open');
         navigation.classList.toggle('open');
-        menuButton.classList.toggle('open');
+        menuButton.setAttribute('aria-expanded', isOpen);
     });
+
+    menuButton.addEventListner('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            menuButton.click();
+        }
+    })
 });
