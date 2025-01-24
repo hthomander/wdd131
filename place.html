@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Hazel Thomander">
-    <meta name="description" content="Puerto Rico Page">
+    <meta name="description" content="Puerto Rico Page. Welcome to Puerto Rico: Breathtaking Carribean Island">
     <title>Puerto Rico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 
@@ -16,6 +17,7 @@
     </header>
 
     <div id="title-line"></div>
+    <main>
     <section id="country-info">
         <h2>Data</h2>
         <table>
@@ -59,13 +61,15 @@
     <section id="weather">
         <h2>Weather</h2>
         <picture>
-            <source srcset="images/weather-icon-mobile.svg" media="(max-width:500px)">
+            <source srcset="images/weather-icon-desktop.webp" type="image/webp">
+            <source srcset="images/weather-icon-desktop.svg" type="image/svg+xml">
             <img src="images/weather-icon-desktop.svg" alt="Weather Icon" width="75" height="75">
         </picture>
         <p>Temperature: <span id="temperature">18°C</span></p>
         <p>Wind speed: <span id="wind-speed">5 km/h</span></p>
         <p>Wind chill: <span id="wind-chill">N/A</span></p>
     </section>
+    </main>
 
     <footer>
         <p>&copy; <span id="current-year"></span> Hazel Thomander | 🌊Puerto Rico🌴 | Last modified: <span id="last-modified"></span></p>

@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     position: relative;
@@ -76,7 +76,8 @@ header {
     right: 30px;
 }
 
-#weather h2 {
+#weather h2::after {
+    content: ' 🌞';
     margin-bottom: 10px;
 }
 
