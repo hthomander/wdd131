@@ -111,6 +111,10 @@ footer {
         #weather img[src*="weather-icon-desktop"] {
             display: none;
         }
+        
+        #weather img[src*="weather-icon-desktop.svg"]{
+            display: block;
+        }
 
         #weather {
             font-size: 14px;
