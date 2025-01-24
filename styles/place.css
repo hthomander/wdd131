@@ -108,6 +108,10 @@ footer {
             text-align: left;
         }
 
+        #weather img[src*="weather-icon-desktop"] {
+            display: none;
+        }
+
         #weather {
             font-size: 14px;
         }
