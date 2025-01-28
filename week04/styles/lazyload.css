@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    margin-top: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+img {
+    width: 400px;
+    height: 600px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    display: block;
+    margin: 0 auto;
+}
+
+@keyframes fadeIN {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
