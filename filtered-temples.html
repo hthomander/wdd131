@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temple Album</title>
+    <meta name="description" content="A collection of temples, filtered by different categories.">
+    <meta name="autho" content="Hazel Beth Thomander">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+    <h1>Filtered Temple Album</h1>
+    <nav role="navigation">
+        <button id="menu" aria-label="Toggle navigation">☰</button>
+        <ul class="navigation">
+            <li><a href="#" title="Home" data-filter="all">Home</a></li>
+            <li><a href="#" title="Old" data-filter="old">Old</a></li>
+            <li><a href="#" title="New" data-filter="new">New</a></li>
+            <li><a href="#" title="Large" data-filter="large">Large</a></li>
+            <li><a href="#" title="Small" data-filter="small">Small</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <h2>Temples</h2>
+        <section id="temple-cards" class="temples"></section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Hazel Beth Thomander | Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
