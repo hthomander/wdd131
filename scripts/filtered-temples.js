@@ -137,6 +137,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             displayTemples(filteredTemples);
         });
+
+        const menuButton = document.getElementById('menu');
+        menuButton.addEventListener('click', () => {
+            const navigationMenu = document.querySelector('.navigation');
+            navigationMenu.classList.toggle('open');
+        });
+
     });
 
     displayTemples(temples);
