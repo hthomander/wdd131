@@ -59,5 +59,3 @@ button.addEventListener('click', function(){
         const listItem = [...list.children].find(item.textContent.startsWith(chapter));
         list.removeChild(listItem);
     }
-
-});
