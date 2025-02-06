@@ -38,9 +38,9 @@ window.onload = function(){
 
 document.getElementById('reviewForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    let reviewCount = localStorage.getItem('reviewCount') || 0;
+    let reviewCount = JSON.parse(localStorage.getItem('reviewCount')) || 0;
     reviewCount = parseInt(reviewCount) + 1;
-    localStorage.setItem('reviewCount', reviewCount);
+    localStorage.setItem('reviewCount', JSON.stringify(reviewCount));
 
     window.location.href = "review.html";
 });
