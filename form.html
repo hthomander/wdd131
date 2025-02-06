@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="author" content="Hazel Beth Thomander">
+    <meta name="description" content="Product Review Form Page">
+    <title>Product Review Form Page</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Product Review Form</h1>
+
+        <form method="get" action="review.html" id="reviewForm">
+
+            <label for="product" class="required">Product Name:<span class="asterisk">*</span></label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product...</option>
+            </select>
+
+            <label class="required">Overall Rating: <span class="asterisk">*</span></label>
+            <div id="rating">
+                <label>
+                    <input type="radio" name="rating" value="1" required> ☆
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="2" required> ☆☆
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="3" required> ☆☆☆
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="4" required> ☆☆☆☆
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="5" required> ☆☆☆☆☆
+                </label>
+            </div>
+
+            <label for="installationDate" class="required">Date of Installation: <span class="asterisk">*</span>
+            <input type="date" id="installationDate" name="installationDate" required>
+
+            <label for="features"></label>
+            <h3>Useful Features (Select all that apply):</h3>
+            <div id="features">
+                <label><input type="checkbox" name="features" value="Feature1">Feature 1</label>
+                <label><input type="checkbox" name="features" value="Feature2">Feature 2</label>
+                <label><input type="checkbox" name="features" value="Feature3">Feature 3</label>
+                <label><input type="checkbox" name="features" value="Feature4">Feature 4</label>
+            </div>
+
+            <label for="review">Written Review (Optional):</label>
+            <textarea id="review" name="review"></textarea>
+
+            <label for="username">Your Name (Optional):</label>
+            <input type="text" id="username" name="username">
+
+            <input type="submit" value="Submit Review">
+        </form>
+    </div>
+    
+    <footer>
+        <p>Thank you for submitting your review!</p>
+    </footer>
+    <script src="scripts/form.js"></script>
+</body>
+</html>

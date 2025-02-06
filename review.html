@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hazel Beth Thomander">
+    <meta name="description" content="confirmation page for product review form">
+    <title>Review Confirmation For the Product Review Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You For Your Review!</h1>
+        <p>Your review has been submitted successfully.</p>
+        <p>Total Reviews Submitted: <span id="reviewCount"></span></p>
+    </div>
+
+    <footer>
+        <p>Thank you for your participation!</p>
+    </footer>
+
+    <script>
+        window.onload = function(){
+            const reviewCount = localStorage.getItem('reviewCount') || 0;
+            document.getElementById('reviewCount').innerText = reviewCount;
+        };
+    </script>
+    
+</body>
+</html>
