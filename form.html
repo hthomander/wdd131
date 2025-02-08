@@ -8,7 +8,7 @@
     <title>Product Review Form Page</title>
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -47,10 +47,14 @@
             
             <label for="features">Useful Features (Select all that apply):</label>
             <div id="features">
-                <label><input type="checkbox" name="features" value="Feature1">Feature 1</label>
-                <label><input type="checkbox" name="features" value="Feature2">Feature 2</label>
-                <label><input type="checkbox" name="features" value="Feature3">Feature 3</label>
-                <label><input type="checkbox" name="features" value="Feature4">Feature 4</label>
+                <label for="Feature1">Feature 1</label>
+                <input type="checkbox" name="features" id="Feature1" value="Feature1">
+                <label for="Feature2">Feature 2</label>
+                <input type="checkbox" name="features" id="Feature2" value="Feature2">
+                <label for="Feature3">Feature 3</label>
+                <input type="checkbox" name="features" id= "Feature3" value="Feature3">
+                <label for="Feature4">Feature 4</label>
+                <input type="checkbox" name="features" id= "Feature4" value="Feature4">
             </div>
 
             <label for="review">Written Review (Optional):</label>
