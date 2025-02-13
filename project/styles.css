@@ -1,0 +1,401 @@
+:root {
+    --primary-color: #4162c6;
+    --secondary-color: #8b4513;
+    --text-color: #333;
+    --background-color: #a8bcf9;
+    --button-hover: #ef834a;
+    --section-bg: #ffffff;
+}
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+header .logo img {
+   height: 170px;
+   width: auto;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #ffff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--button-hover);
+}
+section {
+    background-color: var(--section-bg);
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('banner.jpg') center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    border-radius: 0;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin: 10px 0 20px;
+}
+
+button {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+h1, h2 {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 10px;
+}
+
+.about, .reviews, .contact  {
+    background-color: var(--section-bg);
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+}
+
+.about:hover, .events:hover, .reviews:hover, .contact:hover {
+    transform: translateY(-5px);
+}
+
+
+.reviews {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.review p:nth-child(2) {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.why-choose-us  {
+    background-color: var(--section-bg);
+    padding: 40px;
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.why-choose-us h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.reasons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.reason {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reason:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.reason h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.reason p {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+#review-slider {
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+#review-slider p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #ffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    width: 100%;
+    position: static;
+    bottom: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--button-hover);
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact label {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact button {
+    background-color: var(--background-color);
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover  {
+    background-color: var(--button-hover);
+}
+
+.booking {
+    background-color: var(--section-bg);
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking h1 {
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.booking .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: left;
+    align-items: flex-start
+}
+
+.booking label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.booking input, .booking select, .booking textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.booking input:focus, .booking select:focus, .booking textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.booking button {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.booking button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+.booking textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+@media only screen and (max-width: 768px) {
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+
+    .banner {
+        padding: 60px 20px;
+    }
+
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .booking {
+        padding: 20px;
+    }
+
+    .booking h1 {
+        font-size: 2rem;
+    }
+
+    .booking label {
+        font-size: 1rem;
+    }
+
+    .booking input, .booking select, .booking textarea {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .booking button {
+        font-size: 1.1rem;
+    }
+
+    .reasons {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .reason h3 {
+        font-size: 1.5rem;
+    }
+
+    .reason p {
+        font-size: 1rem;
+    }
+}
