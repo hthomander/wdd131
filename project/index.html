@@ -6,12 +6,8 @@
     <meta name="author" content="Hazel Beth Thomander">
     <meta name="description" content="Let's Go Dutch catering site">
     <title>Let's Go Dutch Catering</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Lora&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"> defer </script>
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.3.0/dist/fullcalendar.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.3.0/dist/fullcalendar.min.js"></script>
+    <script src="script.js" defer></script>
 
 </head>
 <body>
@@ -28,9 +24,9 @@
         </nav>
     </header>
 
-    <section id="home" class="banner">
+    <section id="home" class="banner" loading="lazy">
         <h1>Dutch Oven Lovin'</h1>
-        <p> Experience world-class catering for your special events!</p>
+        <p>Brand your occasion with the finest custom cooking!</p>
         <button onclick="window.location.href='booking.html' ">Book Now</button>
     </section>
 
@@ -42,8 +38,11 @@
 
     <section id="reviews" class="reviews">
         <h2>Customer Reviews</h2>
-        <div id="review-slider" class="slider">
+        <div id="review-slider">
+            <span id="review-text">The best catering experience available!</span>
         </div>
+        <button id="prev-review">Previous</button>
+        <button id="next-review">Next</button>
     </section>
 
     <section id="contact" class="contact">

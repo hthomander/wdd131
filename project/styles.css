@@ -11,6 +11,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'Poppins';
+    src: url(/project/fonts/Poppins/Poppins-Black.ttf) format('ttf'),
+         url(/project/fonts/Lora/static/Lora-Regular.ttf) format('ttf'),
+         url(/project/fonts/Roboto/static/Roboto-Regular.ttf) format('ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 html, body {
     width: 100%;
@@ -28,8 +37,7 @@ header {
     padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
+    justify-content: space-between;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -39,16 +47,15 @@ header .logo img {
    width: auto;
 }
 
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
+header nav {
+    flex-grow: 1;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
 }
 
 header nav ul li a {
@@ -57,12 +64,14 @@ header nav ul li a {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     padding: 10px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 header nav ul li a:hover {
     color: var(--button-hover);
+    transform: scale(1.05);
 }
+
 section {
     background-color: var(--section-bg);
     padding: 40px;
@@ -71,6 +80,10 @@ section {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section:hover, .about:hover, .reviews:hover, .contact:hover {
+    transform: translateY(-5px);
 }
 
 .banner {
@@ -108,28 +121,29 @@ button:hover {
     transform: scale(1.05);
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'Roboto Slab', serif;
     text-align: center;
     margin-bottom: 20px;
 }
 
 h3 {
-    font-family: 'Roboto Slab', serif;
     margin-bottom: 10px;
 }
 
-.about, .reviews, .contact  {
+.about, .reviews, .contact, .why-choose-us, .booking {
     background-color: var(--section-bg);
-    margin: 20px 0;
+    margin: 20px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 40px;
     text-align: center;
+    max-width: 1200px;
 }
 
-.about:hover, .events:hover, .reviews:hover, .contact:hover {
-    transform: translateY(-5px);
+.why-choose-us {
+    margin: 40px auto;
+    max-width: 1000px;
 }
 
 
@@ -140,27 +154,6 @@ h3 {
 }
 
 
-.review p:nth-child(2) {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.why-choose-us  {
-    background-color: var(--section-bg);
-    padding: 40px;
-    text-align: center;
-    margin: 40px auto;
-    max-width: 1000px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.why-choose-us h2 {
-    font-family: 'Roboto Slab', serif;
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
 
 .reasons {
     display: grid;
@@ -219,19 +212,9 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-    width: 100%;
-    position: static;
-    bottom: 0;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: var(--button-hover);
+    width: 100% !important;
+    position: relative;
+    left: 0;
 }
 
 .contact form {
@@ -250,16 +233,10 @@ footer a:hover {
 
 .contact input, .contact textarea {
     width: 100%;
-    max-width: 500px;
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
-}
-
-.contact textarea {
-    resize: vertical;
-    min-height: 120px;
 }
 
 .contact button {
@@ -275,58 +252,23 @@ footer a:hover {
     background-color: var(--button-hover);
 }
 
-.booking {
-    background-color: var(--section-bg);
-    padding: 40px;
-    max-width: 800px;
-    margin: 40px auto;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.booking h1 {
-    font-family: 'Roboto Slab', serif;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    color: var(--primary-color);
-}
-
-.booking .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    text-align: left;
-    align-items: flex-start
-}
-
-.booking label {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-    color: var(--primary-color);
+.booking label, .booking input, .booking select, .booking textarea {
+   font-size: 1.1rem;
 }
 
 .booking input, .booking select, .booking textarea {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    transition: border-color 0.3s ease;
+   padding: 12px;
+   border: 2px solid #ccc;
+   border-radius: 5px;
+   margin-bottom: 10px;
 }
 
-.booking input:focus, .booking select:focus, .booking textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
-}
 
 .booking button {
     background-color: var(--primary-color);
     color: #fff;
     font-size: 1.2rem;
     padding: 15px 30px;
-    border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -337,58 +279,27 @@ footer a:hover {
     transform: scale(1.05);
 }
 
-.booking textarea {
-    resize: vertical;
-    min-height: 120px;
-}
+
 
 @media only screen and (max-width: 768px) {
     header nav ul {
-        display: flex;
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+        gap: 15px;
     }
 
-    header nav ul li {
-        margin: 10px 0;
+    header nav ul li a {
+        padding: 8px;
+        font-size: 1rem;
     }
 
-    section {
+    section, .booking {
         padding: 40px 5%;
     }
 
-    .banner {
-        padding: 60px 20px;
-    }
 
     .banner h1 {
         font-size: 2.5rem;
-    }
-
-    .booking {
-        padding: 20px;
-    }
-
-    .booking h1 {
-        font-size: 2rem;
-    }
-
-    .booking label {
-        font-size: 1rem;
-    }
-
-    .booking input, .booking select, .booking textarea {
-        font-size: 1rem;
-        padding: 10px;
-    }
-
-    .booking button {
-        font-size: 1.1rem;
-    }
-
-    .reasons {
-        grid-template-columns: 1fr;
-        gap: 20px;
     }
 
     .reason h3 {
